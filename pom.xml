@@ -111,7 +111,7 @@
                 </executions>
                 <configuration>
                     <commandlineArgs>-Duser.language=en -Duser.country=RU</commandlineArgs>
-                    <mainClass>ru.unclediga.Main</mainClass>
+                    <mainClass>ru.unclediga.simple.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

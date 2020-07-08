@@ -1,7 +1,7 @@
-package ru.unclediga;
+package ru.unclediga.simple;
 
-import ru.unclediga.util.TestBooks;
-import ru.unclediga.util.Util;
+import ru.unclediga.Util;
+import ru.unclediga.simple.util.TestBooks;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

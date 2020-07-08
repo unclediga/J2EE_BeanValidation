@@ -1,11 +1,11 @@
-package ru.unclediga;
+package ru.unclediga.simple;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ru.unclediga.util.TestBooks;
-import ru.unclediga.util.Util;
+import ru.unclediga.Util;
+import ru.unclediga.simple.util.TestBooks;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

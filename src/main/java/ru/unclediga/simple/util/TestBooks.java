@@ -1,6 +1,7 @@
-package ru.unclediga.util;
+package ru.unclediga.simple.util;
 
-import ru.unclediga.Book;
+import ru.unclediga.Util;
+import ru.unclediga.simple.Book;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ru.unclediga.util;
+package ru.unclediga;
 
 import javax.validation.ConstraintViolation;
 import java.text.ParseException;

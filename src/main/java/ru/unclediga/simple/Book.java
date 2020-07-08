@@ -1,4 +1,4 @@
-package ru.unclediga;
+package ru.unclediga.simple;
 
 import javax.validation.constraints.*;
 import java.util.Date;
