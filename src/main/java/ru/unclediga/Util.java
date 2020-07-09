@@ -23,6 +23,7 @@ public class Util {
         System.out.println("Field: " + violation.getPropertyPath());
         System.out.println("Value: " + violation.getInvalidValue());
         System.out.println("Msg  : " + violation.getMessage());
+        System.out.println("Tmpl : " + violation.getMessageTemplate());
     }
 
     public static <T> void printViolations(Set<ConstraintViolation<T>> violations) {
