@@ -18,15 +18,19 @@ public class Util {
     }
 
     public static <T> void printViolation(ConstraintViolation<T> violation) {
-        System.out.println("Constraint Violation:");
-        System.out.println("Bean : " + violation.getRootBeanClass().getName());
-        System.out.println("Field: " + violation.getPropertyPath());
-        System.out.println("Value: " + violation.getInvalidValue());
-        System.out.println("Msg  : " + violation.getMessage());
-        System.out.println("Tmpl : " + violation.getMessageTemplate());
+        System.out.println(">> Constraint Violation:");
+        System.out.println("    Bean : " + violation.getRootBeanClass().getName());
+        System.out.println("    Field: " + violation.getPropertyPath());
+        System.out.println("    Value: " + violation.getInvalidValue());
+        System.out.println("    Msg  : " + violation.getMessage());
+        System.out.println("    Tmpl : " + violation.getMessageTemplate());
     }
 
     public static <T> void printViolations(Set<ConstraintViolation<T>> violations) {
+        if (violations.size() == 0) {
+            System.out.println("No validation errors");
+            return;
+        }
         for (ConstraintViolation<T> violation : violations) {
             printViolation(violation);
         }
