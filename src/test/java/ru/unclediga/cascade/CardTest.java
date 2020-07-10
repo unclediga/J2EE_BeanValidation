@@ -154,4 +154,39 @@ public class CardTest {
         Util.printViolations(violations2);
         assertEquals(0, violations2.size());
     }
+
+    @Test
+    public void validateProperties() {
+        System.out.println(" = = = Validate property 'cardNumber'");
+        CreditCard card = TestData.getCardTypeField().getCopy();
+        Set<ConstraintViolation<CreditCard>> violations = validator.validateProperty(card, "cardNumber");
+        Util.printViolations(violations);
+        assertEquals(0, violations.size());
+        card.setTestCode("#TC#");
+        violations = validator.validateProperty(card, "cardNumber");
+        Util.printViolations(violations);
+        assertEquals(0, violations.size());
+        card.setCardNumber(null);
+        violations = validator.validateProperty(card, "cardNumber");
+        Util.printViolations(violations);
+        assertEquals(1, violations.size());
+    }
+
+    @Test
+    public void validateValues() {
+        System.out.println(" = = = Validate value 'expirationDate'");
+        Set<ConstraintViolation<CreditCardField>> violations =
+                validator.validateValue(CreditCardField.class, "expirationDate", Util.getDate("01/05/2025"));
+        Util.printViolations(violations);
+        assertEquals(0, violations.size());
+        violations =
+                validator.validateValue(CreditCardField.class, "expirationDate", Util.getDate("07/11/1917"));
+        Util.printViolations(violations);
+        assertEquals(1, violations.size());
+        violations =
+                validator.validateValue(CreditCardField.class, "expirationDate", null);
+        Util.printViolations(violations);
+        assertEquals(1, violations.size());
+    }
+
 }
