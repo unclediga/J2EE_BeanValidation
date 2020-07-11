@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constraint-mappings
+        xmlns="http://jboss.org/xml/ns/javax/validation/mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://jboss.org/xml/ns/javax/validation/mapping validation-mapping-1.1.xsd"
+        version="1.1">
+
+    <bean class="ru.unclediga.xml.Book">
+        <field name="isbn">
+            <constraint annotation="javax.validation.constraints.NotNull"/>
+            <constraint annotation="javax.validation.constraints.Pattern">
+                <element name="regexp">^(97([89]))-?\\d{9}(\\d|X)$</element>
+            </constraint>
+        </field>
+        <field name="author">
+            <constraint annotation="javax.validation.constraints.NotNull"/>
+            <constraint annotation="javax.validation.constraints.Size">
+                <element name="min">10</element>
+            </constraint>
+        </field>
+        <field name="title">
+            <constraint annotation="javax.validation.constraints.NotNull"/>
+        </field>
+        <field name="price">
+            <constraint annotation="javax.validation.constraints.NotNull"/>
+            <constraint annotation="javax.validation.constraints.Min">
+                <element name="value">1</element>
+            </constraint>
+        </field>
+    </bean>
+</constraint-mappings>
