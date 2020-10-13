@@ -15,7 +15,7 @@
         <version.bval>0.5</version.bval>
         <version.el>3.0.0</version.el>
         <!-- Test -->
-        <version.junit>4.12</version.junit>
+        <version.junit>4.13.1</version.junit>
         <!-- Maven Plugins -->
         <!-- 
              https://maven.apache.org/plugins/index.html 
